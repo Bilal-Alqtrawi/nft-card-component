@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+:root {
+    --main-color: hsl(215, 51%, 70%);
+}
+body {
+    background-color:  hsl(217, 54%, 11%);
+    font-family: 'Outfit', sans-serif;
+}
+body p {
+    font-size: 18px;
+}
+.body-content {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.body-content .card {
+    width: 345px;
+    max-width: 100%;
+    padding: 25px;
+    background-color: hsl(216, 50%, 16%);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    position: relative;
+}
+.body-content .card::before,
+.body-content .card::after {
+    content: "";
+    position: absolute;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    width: 100%;
+    height: 100%;
+}
+.body-content .card::before {
+    background-color: #0c1729;
+    left: -15px;
+    top: 10px;
+    padding: 0 15px 20px;
+    z-index: -1;
+}
+.body-content .card::after {
+    background-color: #0c192c;
+    top: -14px;
+    left: -40px;
+    padding: 28px 40px;
+    z-index: -2;    
+    box-shadow:  0px 0px 4px 0px rgb(0 0 0 / 10.5%) ;
+}
+.body-content .card .info > h3,
+.body-content .creation p span  {
+    color: white;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+}
+.body-content .card .info > h3:hover,
+.body-content .creation p span:hover {
+    color: cyan;
+    cursor: pointer;
+}
+.body-content .card .info >  p {
+    color: var(--main-color);
+    line-height: 1.7;
+    font-weight: lighter;
+    margin-bottom: 20px;
+}
+.body-content .card .image-holder {
+    position: relative;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    overflow: hidden;
+}
+.body-content .card .image-holder img {
+    max-width: 100%;
+    display: block;
+}
+.body-content .card .image-holder::before {
+    content: "";
+    position: absolute;
+    background-color: rgba(0, 255, 255, .49);
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/icon-view.svg") ;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+    left: -100%;
+}
+.body-content .card .image-holder:hover::before {
+    left: 0;
+    cursor: pointer;
+}
+.body-content .card .date,
+.body-content .card .date > div {
+    display: flex;
+    align-items: center;
+}
+.body-content .card .date {
+    justify-content: space-between;
+}
+.body-content .card .date > div {
+    gap: 6px;
+}
+.body-content .card .date > div:first-child {
+    color: hsl(178, 100%, 50%);
+}
+.body-content .card .date > div:last-child {
+    color: var(--main-color)
+}
+.body-content .card .avatar {
+    width: 32px;
+    /* height: 32px; */
+    border: 1px solid  white;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.body-content .creation {
+    border-top: 1px solid #2f4159 ;
+    margin-top: 20px;
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.body-content .creation p {
+    color: var(--main-color);
+    font-weight: lighter;
+    font-size: 1rem;
+}
